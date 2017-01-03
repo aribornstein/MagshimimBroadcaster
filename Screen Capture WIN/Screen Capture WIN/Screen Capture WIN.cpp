@@ -42,7 +42,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     }
 	
 	Recorder rec("record.avi", 25);
-	rec.display();
+	rec.start();
 	
     HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_SCREENCAPTUREWIN));
 
