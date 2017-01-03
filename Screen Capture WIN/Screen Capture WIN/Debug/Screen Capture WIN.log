@@ -1,0 +1,7 @@
+﻿  stdafx.cpp
+  Screen Capture WIN.cpp
+  Recorder.cpp
+c:\users\user\documents\magshimim\project\magshimimbroadcaster\screen capture win\screen capture win\recorder.cpp(12): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\magshimim\project\magshimimbroadcaster\screen capture win\screen capture win\recorder.cpp(84): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  Generating Code...
+  Screen Capture WIN.vcxproj -> C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\Screen Capture WIN\Debug\Screen Capture WIN.exe
