@@ -4,7 +4,7 @@
 #include "stdafx.h"
 #include "Screen Capture WIN.h"
 #include "Recorder.h"
-
+#include <shellapi.h>
 
 #define MAX_LOADSTRING 100
 
@@ -28,7 +28,14 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 {
     UNREFERENCED_PARAMETER(hPrevInstance);
     UNREFERENCED_PARAMETER(lpCmdLine);
-
+	
+	int argc = 0;
+	LPWSTR *argv = CommandLineToArgvW(lpCmdLine, &argc);
+	if (argc != 2)
+	{
+		printf("Usage: .exe {filename} {time in seconds}");
+		return -1;
+	}
 	
 	// Initialize global strings
     LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
