@@ -4,7 +4,7 @@
 #include "stdafx.h"
 #include "Screen Capture WIN.h"
 #include "Recorder.h"
-#include <shellapi.h>
+
 
 #define MAX_LOADSTRING 100
 
@@ -18,24 +18,16 @@ ATOM                MyRegisterClass(HINSTANCE hInstance);
 BOOL                InitInstance(HINSTANCE, int);
 LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK    About(HWND, UINT, WPARAM, LPARAM);
-HBITMAP				captureScreen();
 
-
+//The windows main.
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
                      _In_opt_ HINSTANCE hPrevInstance,
                      _In_ LPWSTR    lpCmdLine,
                      _In_ int       nCmdShow)
 {
-    UNREFERENCED_PARAMETER(hPrevInstance);
+   /* UNREFERENCED_PARAMETER(hPrevInstance);
     UNREFERENCED_PARAMETER(lpCmdLine);
-	
-	int argc = 0;
-	LPWSTR *argv = CommandLineToArgvW(lpCmdLine, &argc);
-	if (argc != 2)
-	{
-		printf("Usage: .exe {filename} {time in seconds}");
-		return -1;
-	}
+
 	
 	// Initialize global strings
     LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
@@ -46,17 +38,18 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     if (!InitInstance (hInstance, nCmdShow))
     {
         return FALSE;
-    }
+    }*/
 	
-	Recorder rec("record.avi", 25);
+	Recorder rec("record.avi", 1, 3);
 	rec.start();
-	
-    HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_SCREENCAPTUREWIN));
+	//rec.display();
+	/*
+   // HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_SCREENCAPTUREWIN));
 
-    MSG msg;
+   // MSG msg;
 
     // Main message loop:
-    while (GetMessage(&msg, nullptr, 0, 0))
+   /* while (GetMessage(&msg, nullptr, 0, 0))
     {
         if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
         {
@@ -64,36 +57,9 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
             DispatchMessage(&msg);
         }
     }
-
-    return (int) msg.wParam;
-}
-
-
-HBITMAP	captureScreen()
-{
-	HDC hdc = GetDC(NULL); // get the desktop device context
-	HDC hDest = CreateCompatibleDC(hdc); // create a device context to use yourself
-
-										 // get the height and width of the screen
-	int height = GetSystemMetrics(SM_CYVIRTUALSCREEN);
-	int width = GetSystemMetrics(SM_CXVIRTUALSCREEN);
-
-	// create a bitmap
-	HBITMAP hbDesktop = CreateCompatibleBitmap(hdc, width, height);
-
-	// use the previously created device context with the bitmap
-	SelectObject(hDest, hbDesktop);
-
-	// copy from the desktop device context to the bitmap device context
-	// call this once per 'frame'
-	BitBlt(hDest, 0, 0, width, height, hdc, 0, 0, SRCCOPY);
-
-	// after the recording is done, release the desktop context you got..
-	ReleaseDC(NULL, hdc);
-
-	// ..and delete the context you created
-	DeleteDC(hDest);
-	return hbDesktop;
+	//return (int) msg.wParam;*/
+	return 0;
+    
 }
 
 //
@@ -143,7 +109,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    {
       return FALSE;
    }
-
+   
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
 

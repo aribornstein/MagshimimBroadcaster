@@ -6,13 +6,23 @@ using namespace cv;
 using namespace std;
 
 
-Recorder::Recorder(std::string name, int fps)
+/*
+Recorder constructor.
+Parameters: the name of the file and the fps and the time to record.
+Return Value: None.
+*/
+Recorder::Recorder(std::string name, int fps, time_t timePerVid)
 {
 	_filename = name;
 	_framerate = fps;
+	_durationOfVid = timePerVid;
 }
 
-
+/*
+Turns a window to an openCV image (matrix).
+Parameters: The window.
+Return Value: The image.
+*/
 Mat Recorder::hwnd2mat(HWND hwnd) {
 
 	HDC hwindowDC, hwindowCompatibleDC;
@@ -62,6 +72,12 @@ Mat Recorder::hwnd2mat(HWND hwnd) {
 	return src;
 }
 
+
+/*
+Display the video.
+Parameters: None.
+Return Value: None.
+*/
 void Recorder::display()
 {
 	VideoCapture cap(_filename); // open the default camera
@@ -87,20 +103,27 @@ void Recorder::display()
 }
 
 
+/*
+Records the screen for a finite amount of time.
+Parameters: None.
+Return Value: None.
+*/
 void Recorder::start()
 {
 	HWND desktop = GetDesktopWindow();
 	Mat im = this->hwnd2mat(desktop);
 	VideoWriter writer;
-	int codec = CV_FOURCC('M', 'J', 'P', 'G');
+	int codec = CV_FOURCC('M', 'S', 'V', 'C');
+	//int codec = CV_FOURCC(-1, -1, -1, -1);//used to go through the codecs
 	writer.open(_filename, codec, _framerate, im.size());
-	while(true)
+	time_t timer = time(NULL), timeOfCapture = time(NULL);
+	while (timeOfCapture - timer < _durationOfVid)
 	{
-		
 		HWND desktop = GetDesktopWindow();
 		im = this->hwnd2mat(desktop);
-		imshow("frame", im);
+		//imshow("frame", im);
 		writer.write(im);
+		time(&timeOfCapture);
 		char key = waitKey(1);
 		if (key == 27)
 		{
