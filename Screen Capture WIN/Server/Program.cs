@@ -10,7 +10,8 @@ namespace Server
     {
         static void Main(string[] args)
         {
-
+            Model m = new Model(22222);
+            m.Run();
         }
     }
 }

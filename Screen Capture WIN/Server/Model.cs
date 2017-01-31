@@ -8,6 +8,20 @@ namespace Server
 {
     class Model
     {
+        Networking net;
 
+        public Model(short port)
+        {
+            net = new Networking(port);
+        }
+
+        /*
+        Begin running the server.
+        */
+        public void Run()
+        {
+            net.Listen();
+            net.AcceptConnections();
+        }
     }
 }

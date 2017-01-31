@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net.Sockets;
 using System.Threading;
-
+using System.IO;
 
 namespace Server
 {
@@ -52,6 +52,10 @@ namespace Server
             try
             {
                 NetworkStream stream = clientSocket.GetStream();
+                using (FileStream file = new FileStream("stream.avi", FileMode.Create))
+                {
+                    stream.CopyTo(file);
+                }
             }
             catch (Exception e)
             {
