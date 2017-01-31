@@ -40,7 +40,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         return FALSE;
     }*/
 	
-	Recorder rec("record.avi", 1, 3);
+	Recorder rec("record.avi", 10, 3);
 	rec.start();
 	//rec.display();
 	/*

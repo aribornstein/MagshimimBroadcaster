@@ -113,8 +113,9 @@ void Recorder::start()
 	HWND desktop = GetDesktopWindow();
 	Mat im = this->hwnd2mat(desktop);
 	VideoWriter writer;
-	int codec = CV_FOURCC('M', 'S', 'V', 'C');
-	//int codec = CV_FOURCC(-1, -1, -1, -1);//used to go through the codecs
+	//int codec = CV_FOURCC('M', 'S', 'V', 'C');
+	//int codec = CV_FOURCC('H', '2', '6', '4');
+	int codec = CV_FOURCC(-1, -1, -1, -1);//used to go through the codecs
 	writer.open(_filename, codec, _framerate, im.size());
 	time_t timer = time(NULL), timeOfCapture = time(NULL);
 	while (timeOfCapture - timer < _durationOfVid)
