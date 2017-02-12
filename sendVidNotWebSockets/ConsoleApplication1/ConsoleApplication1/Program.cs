@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
+using System.Diagnostics;
 
 namespace ConsoleApplication1
 {
@@ -12,35 +13,36 @@ namespace ConsoleApplication1
     {
         static void runExe(string run)
         {
-            System.Diagnostics.Process p = new System.Diagnostics.Process();
-            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
-            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-            startInfo.FileName = "cmd.exe";
-            startInfo.Arguments = run;
-            p.StartInfo = startInfo;
+            Process p = new Process();
+            p.StartInfo.FileName = run;
+            //ProcessStartInfo startInfo = new ProcessStartInfo();
+            //startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            //startInfo.FileName = "1.exe";
+            //startInfo.Arguments = run;
+            //p.StartInfo = startInfo;
+            p.StartInfo.CreateNoWindow = false;
             p.Start();
         }
 
         static void Main(string[] args)
         {
-            string run = "1.exe";
-            string vid = "record.avi";
+            string run = "C:\\Users\\User\\Desktop\\SCI\\sendVidNotWebSockets\\ConsoleApplication1\\ConsoleApplication1\\obj\\Debug\\1.exe";
+            string vid = "C:\\Users\\User\\Desktop\\SCI\\sendVidNotWebSockets\\ConsoleApplication1\\ConsoleApplication1\\bin\\Debug\\record.avi";
             int PORT = 11000;
 
             IPHostEntry ipHost = Dns.GetHostEntry(Dns.GetHostName());
             IPAddress ipAddr = ipHost.AddressList[0];
             IPEndPoint ipEndPoint = new IPEndPoint(ipAddr, PORT);
-
-            Socket c = new Socket(ipAddr.AddressFamily, SocketType.Dgram, ProtocolType.Udp);
             //Socket k = new Socket(ipAddr.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
+            Socket k = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
             try
             {
-                /*k.Connect(ipEndPoint);
+                k.Connect("127.0.0.1", PORT);
                 runExe(run);
-                k.SendFile(vid);
+                k.SendFile(vid, null, null, TransmitFileOptions.UseDefaultWorkerThread);
                 k.Shutdown(SocketShutdown.Both);
-                k.Close();*/
+                k.Close();
 
                 /*string s1 = String.Format("This is text data that preceds the file.{0}", Environment.NewLine);
                 byte[] preBuf = Encoding.ASCII.GetBytes(s1);
@@ -48,18 +50,12 @@ namespace ConsoleApplication1
                 byte[] postBuf = Encoding.ASCII.GetBytes(s2);
                 Console.WriteLine("Sending {0} with buffers to the host.{1}", vid, Environment.NewLine);
                 c.SendFile(vid, preBuf, postBuf, TransmitFileOptions.UseDefaultWorkerThread);*/
-
-                runExe(run);
-                c.SendFile(vid);
-                c.Shutdown(SocketShutdown.Both);
-                c.Close();
-
             }
             catch(Exception e)
             {
                 Console.WriteLine(e.ToString());
             }
-            Console.ReadKey();
+            //Console.ReadKey();
         }
     }
 }
