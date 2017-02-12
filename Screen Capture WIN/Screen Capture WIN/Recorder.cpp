@@ -16,6 +16,11 @@ Recorder::Recorder(std::string name, int fps, time_t timePerVid)
 	_filename = name;
 	_framerate = fps;
 	_durationOfVid = timePerVid;
+	HWND desktop = GetDesktopWindow();
+	_size = Mat(this->hwnd2mat(desktop)).size();
+	_codec = CV_FOURCC('M', 'S', 'V', 'C');
+	//_codec = CV_FOURCC(-1, -1, -1, -1);
+	DecideFramerate();
 }
 
 /*
@@ -88,7 +93,7 @@ void Recorder::display()
 	IplImage* frame;
 	namedWindow("Video", 1);
 	
-	for (;;)
+	for (;;)// liad & elad note : while (true) { } optimitation is same
 	{
 		frame = cvQueryFrame(capture);
 		if (!frame) { break; }
@@ -102,6 +107,55 @@ void Recorder::display()
 	cvDestroyWindow("Video");
 }
 
+void Recorder::DecideFramerate()
+{
+	ifstream f(_confName);
+	if (!f)
+	{
+		int counter = 0;
+		VideoWriter writer;
+		writer.open("record1.avi", _codec, _framerate, _size);
+		Mat m;
+		time_t timer = time(NULL), timeOfCapture = time(NULL);
+		while (timeOfCapture - timer < 3)
+		{
+			HWND desktop = GetDesktopWindow();
+			m = this->hwnd2mat(desktop);
+			writer.write(m);
+			counter++;
+			time(&timeOfCapture);
+		}
+		writer.release();
+		_framerate = counter / 3;
+		system("del record1.avi");
+		ofstream file(_confName);
+		file << "filename: " + _filename << endl << "framerate: " +  to_string(_framerate);
+		file.close();
+	}
+	else
+	{
+		ifstream readFile(_confName);
+		string val, s = " ";
+		int counter = 0;
+		while (!readFile.eof())
+		{
+			getline(readFile, val);
+			val = val.substr(val.find(s));
+			val.erase(remove(val.begin(), val.end(), ' '), val.end());
+			if (counter == 0)
+			{
+				_filename = val;
+			}
+			else if (counter == 1)
+			{
+				_framerate = stoi(val);
+			}
+			counter++;
+		}
+		readFile.close();
+	}
+	f.close();
+}
 
 /*
 Records the screen for a finite amount of time.
@@ -110,20 +164,16 @@ Return Value: None.
 */
 void Recorder::start()
 {
-	HWND desktop = GetDesktopWindow();
-	Mat im = this->hwnd2mat(desktop);
 	VideoWriter writer;
-	//int codec = CV_FOURCC('M', 'S', 'V', 'C');
-	//int codec = CV_FOURCC('H', '2', '6', '4');
-	int codec = CV_FOURCC(-1, -1, -1, -1);//used to go through the codecs
-	writer.open(_filename, codec, _framerate, im.size());
+	writer.open(_filename, _codec, _framerate, _size);
+	Mat m;
 	time_t timer = time(NULL), timeOfCapture = time(NULL);
 	while (timeOfCapture - timer < _durationOfVid)
 	{
 		HWND desktop = GetDesktopWindow();
-		im = this->hwnd2mat(desktop);
-		//imshow("frame", im);
-		writer.write(im);
+		m = this->hwnd2mat(desktop);
+		//imshow("frame", m);
+		writer.write(m);
 		time(&timeOfCapture);
 		char key = waitKey(1);
 		if (key == 27)
