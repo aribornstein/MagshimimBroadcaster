@@ -11,36 +11,39 @@ namespace ConsoleApplication1
 {
     class Program
     {
-        static void runExe(string run)
-        {
-            Process p = new Process();
-            p.StartInfo.FileName = run;
-            //ProcessStartInfo startInfo = new ProcessStartInfo();
-            //startInfo.WindowStyle = ProcessWindowStyle.Hidden;
-            //startInfo.FileName = "1.exe";
-            //startInfo.Arguments = run;
-            //p.StartInfo = startInfo;
-            p.StartInfo.CreateNoWindow = false;
-            p.Start();
-        }
-
         static void Main(string[] args)
         {
             string run = "C:\\Users\\User\\Desktop\\SCI\\sendVidNotWebSockets\\ConsoleApplication1\\ConsoleApplication1\\obj\\Debug\\1.exe";
             string vid = "C:\\Users\\User\\Desktop\\SCI\\sendVidNotWebSockets\\ConsoleApplication1\\ConsoleApplication1\\bin\\Debug\\record.avi";
             int PORT = 11000;
 
-            IPHostEntry ipHost = Dns.GetHostEntry(Dns.GetHostName());
-            IPAddress ipAddr = ipHost.AddressList[0];
-            IPEndPoint ipEndPoint = new IPEndPoint(ipAddr, PORT);
+            //IPHostEntry ipHost = Dns.GetHostEntry(Dns.GetHostName());
+            //IPAddress ipAddr = ipHost.AddressList[0];
+            //IPEndPoint ipEndPoint = new IPEndPoint(ipAddr, PORT);
             //Socket k = new Socket(ipAddr.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
             Socket k = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+
+
 
             try
             {
                 k.Connect("127.0.0.1", PORT);
-                runExe(run);
-                k.SendFile(vid, null, null, TransmitFileOptions.UseDefaultWorkerThread);
+                while (true)
+                {
+                    try
+                    {
+                        Process.Start(run);
+                        System.Threading.Thread.Sleep(3500);// 3 secs for creating a vid. 0.5 secs for the recorder's run (to be tweaked)
+                        k.SendFile(vid, null, null, TransmitFileOptions.UseDefaultWorkerThread);
+                        Console.WriteLine("Sent");
+                    }
+                    catch (Exception commsE)
+                    {
+                        Console.WriteLine(commsE.ToString());
+                        break;
+                    }
+                }
+
                 k.Shutdown(SocketShutdown.Both);
                 k.Close();
 
@@ -55,7 +58,7 @@ namespace ConsoleApplication1
             {
                 Console.WriteLine(e.ToString());
             }
-            //Console.ReadKey();
+            Console.ReadKey();
         }
     }
 }
