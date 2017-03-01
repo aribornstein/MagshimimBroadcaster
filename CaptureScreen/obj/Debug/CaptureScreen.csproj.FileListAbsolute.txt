@@ -1,9 +1,0 @@
-c:\users\abornst\documents\visual studio 2015\Projects\CaptureScreen\CaptureScreen\bin\Debug\CaptureScreen.exe.config
-c:\users\abornst\documents\visual studio 2015\Projects\CaptureScreen\CaptureScreen\bin\Debug\CaptureScreen.exe
-c:\users\abornst\documents\visual studio 2015\Projects\CaptureScreen\CaptureScreen\bin\Debug\CaptureScreen.pdb
-c:\users\abornst\documents\visual studio 2015\Projects\CaptureScreen\CaptureScreen\obj\Debug\CaptureScreen.csprojResolveAssemblyReference.cache
-c:\users\abornst\documents\visual studio 2015\Projects\CaptureScreen\CaptureScreen\obj\Debug\CaptureScreen.Form1.resources
-c:\users\abornst\documents\visual studio 2015\Projects\CaptureScreen\CaptureScreen\obj\Debug\CaptureScreen.Properties.Resources.resources
-c:\users\abornst\documents\visual studio 2015\Projects\CaptureScreen\CaptureScreen\obj\Debug\CaptureScreen.csproj.GenerateResource.Cache
-c:\users\abornst\documents\visual studio 2015\Projects\CaptureScreen\CaptureScreen\obj\Debug\CaptureScreen.exe
-c:\users\abornst\documents\visual studio 2015\Projects\CaptureScreen\CaptureScreen\obj\Debug\CaptureScreen.pdb
