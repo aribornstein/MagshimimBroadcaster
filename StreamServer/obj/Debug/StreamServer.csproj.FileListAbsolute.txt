@@ -1,0 +1,18 @@
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\CaptureScreen\StreamServer\bin\Debug\StreamServer.exe.config
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\CaptureScreen\StreamServer\bin\Debug\StreamServer.exe
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\CaptureScreen\StreamServer\bin\Debug\StreamServer.pdb
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\CaptureScreen\StreamServer\obj\Debug\StreamServer.csprojResolveAssemblyReference.cache
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\CaptureScreen\StreamServer\obj\Debug\StreamServer.exe
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\CaptureScreen\StreamServer\obj\Debug\StreamServer.pdb
+C:\Users\User\Documents\magshimim\Project\ScreenRecorder\StreamServer\bin\Debug\StreamServer.exe.config
+C:\Users\User\Documents\magshimim\Project\ScreenRecorder\StreamServer\obj\Debug\StreamServer.exe
+C:\Users\User\Documents\magshimim\Project\ScreenRecorder\StreamServer\obj\Debug\StreamServer.pdb
+C:\Users\User\Documents\magshimim\Project\ScreenRecorder\StreamServer\bin\Debug\StreamServer.exe
+C:\Users\User\Documents\magshimim\Project\ScreenRecorder\StreamServer\bin\Debug\StreamServer.pdb
+C:\Users\User\Documents\magshimim\Project\ScreenRecorder\StreamServer\obj\Debug\StreamServer.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\AriProj\Ido\ScreenRecorder\ScreenRecorder\StreamServer\bin\Debug\StreamServer.exe.config
+C:\Users\User\Desktop\AriProj\Ido\ScreenRecorder\ScreenRecorder\StreamServer\bin\Debug\StreamServer.exe
+C:\Users\User\Desktop\AriProj\Ido\ScreenRecorder\ScreenRecorder\StreamServer\bin\Debug\StreamServer.pdb
+C:\Users\User\Desktop\AriProj\Ido\ScreenRecorder\ScreenRecorder\StreamServer\obj\Debug\StreamServer.exe
+C:\Users\User\Desktop\AriProj\Ido\ScreenRecorder\ScreenRecorder\StreamServer\obj\Debug\StreamServer.pdb
+C:\Users\User\Desktop\AriProj\Ido\ScreenRecorder\ScreenRecorder\StreamServer\obj\Debug\StreamServer.csprojResolveAssemblyReference.cache
