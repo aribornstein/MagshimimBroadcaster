@@ -29,3 +29,14 @@ C:\Users\User\Desktop\AriProj\Ido\ScreenRecorder\ScreenRecorder\CaptureScreen\ob
 C:\Users\User\Desktop\AriProj\Ido\ScreenRecorder\ScreenRecorder\CaptureScreen\obj\Debug\CaptureScreen.Form1.resources
 C:\Users\User\Desktop\AriProj\Ido\ScreenRecorder\ScreenRecorder\CaptureScreen\obj\Debug\CaptureScreen.Properties.Resources.resources
 C:\Users\User\Desktop\AriProj\Ido\ScreenRecorder\ScreenRecorder\CaptureScreen\obj\Debug\StreamClient.csproj.GenerateResource.Cache
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\CaptureScreen\bin\Debug\CaptureScreen.exe.config
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\CaptureScreen\bin\Debug\CaptureScreen.exe
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\CaptureScreen\bin\Debug\CaptureScreen.pdb
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\CaptureScreen\bin\Debug\Core.dll
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\CaptureScreen\bin\Debug\Core.pdb
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\CaptureScreen\obj\Debug\StreamClient.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\CaptureScreen\obj\Debug\CaptureScreen.Form1.resources
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\CaptureScreen\obj\Debug\CaptureScreen.Properties.Resources.resources
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\CaptureScreen\obj\Debug\StreamClient.csproj.GenerateResource.Cache
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\CaptureScreen\obj\Debug\CaptureScreen.exe
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\CaptureScreen\obj\Debug\CaptureScreen.pdb

@@ -16,3 +16,9 @@ C:\Users\User\Desktop\AriProj\Ido\ScreenRecorder\ScreenRecorder\StreamServer\bin
 C:\Users\User\Desktop\AriProj\Ido\ScreenRecorder\ScreenRecorder\StreamServer\obj\Debug\StreamServer.exe
 C:\Users\User\Desktop\AriProj\Ido\ScreenRecorder\ScreenRecorder\StreamServer\obj\Debug\StreamServer.pdb
 C:\Users\User\Desktop\AriProj\Ido\ScreenRecorder\ScreenRecorder\StreamServer\obj\Debug\StreamServer.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\StreamServer\bin\Debug\StreamServer.exe.config
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\StreamServer\obj\Debug\StreamServer.exe
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\StreamServer\obj\Debug\StreamServer.pdb
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\StreamServer\bin\Debug\StreamServer.exe
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\StreamServer\bin\Debug\StreamServer.pdb
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\StreamServer\obj\Debug\StreamServer.csprojResolveAssemblyReference.cache

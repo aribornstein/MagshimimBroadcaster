@@ -1,0 +1,8 @@
+﻿  Encoder.cpp
+  AssemblyInfo.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
+Encoder.obj : warning LNK4248: unresolved typeref token (01000013) for 'SwsContext'; image may not run
+Decoder.obj : warning LNK4248: unresolved typeref token (01000018) for 'SwsContext'; image may not run
+Encoder.obj : warning LNK4248: unresolved typeref token (01000014) for 'AVDictionary'; image may not run
+Decoder.obj : warning LNK4248: unresolved typeref token (0100001A) for 'AVDictionary'; image may not run
+  Encoding.vcxproj -> C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\x64\Debug\Encoding.dll
+  Encoding.vcxproj -> C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\x64\Debug\Encoding.pdb (Partial PDB)

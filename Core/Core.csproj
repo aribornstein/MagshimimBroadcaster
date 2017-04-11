@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="BitmapEncoder.cs" />
     <Compile Include="BitmapScreen.cs" />
+    <Compile Include="H264Encoder.cs" />
     <Compile Include="IScreen.cs" />
     <Compile Include="IScreenEncoder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
