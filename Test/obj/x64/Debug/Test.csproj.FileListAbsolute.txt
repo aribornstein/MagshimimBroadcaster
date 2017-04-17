@@ -2,9 +2,9 @@ C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\Test\bin\x64\Debu
 C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\Test\bin\x64\Debug\Test.exe
 C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\Test\bin\x64\Debug\Test.pdb
 C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\Test\bin\x64\Debug\Core.dll
-C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\Test\bin\x64\Debug\Encoding.dll
 C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\Test\bin\x64\Debug\Core.pdb
-C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\Test\bin\x64\Debug\Encoding.pdb
 C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\Test\obj\x64\Debug\Test.csprojResolveAssemblyReference.cache
 C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\Test\obj\x64\Debug\Test.exe
 C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\Test\obj\x64\Debug\Test.pdb
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\Test\bin\x64\Debug\VideoEncoding.dll
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\Test\bin\x64\Debug\VideoEncoding.pdb

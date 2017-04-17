@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Core;
 using System.Runtime.InteropServices;
-using Encoding1;
+using VideoEncoding;
 using System.Windows.Forms;
 
 namespace Test
@@ -15,19 +15,23 @@ namespace Test
         static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Encoding1.Encoding encode = new Encoding1.Encoding(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
-            
             while (true)
             {
-                byte[] stuff = encode.GetEncoding(new byte[] { 1, 2, 3, 4 });
-                if (stuff.Length > 0)
+                VideoEncoding.Encoding encode = new VideoEncoding.Encoding(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
+                byte[] stuff;
+                for(int i = 0; i < 200; i++)
                 {
-                    string hex = BitConverter.ToString(stuff);
-                    Console.WriteLine(hex);
+                    stuff = encode.GetEncoding(new byte[] { 1, 2, 3, 4 });
+                    /*if (stuff.Length > 0)
+                    {
+                        string hex = BitConverter.ToString(stuff);
+                        Console.WriteLine(hex);
+                    }
+                    */
                 }
+                Console.WriteLine("press.");
+                Console.ReadKey();
             }
-            Console.ReadKey();
-
         }
     }
 }

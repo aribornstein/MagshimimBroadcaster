@@ -5,6 +5,8 @@
 
 using namespace System;
 
+
+
 Encoder::Encoder(int size_x, int size_y) : width(size_x), height(size_y), i(0)
 {
 	avcodec_register_all();
@@ -72,7 +74,28 @@ Encoder::Encoder(int size_x, int size_y) : width(size_x), height(size_y), i(0)
 	}
 
 	pPixels = new RGBQUAD[width*height];
+	int nbytes = avpicture_get_size(c->pix_fmt, c->width, c->height);   // allocating outbuffer
+	outbuffer = (uint8_t*)av_malloc(nbytes*sizeof(uint8_t));
 
+	inpic = av_frame_alloc();    // mandatory frame allocation
+	if (!inpic) {
+		fprintf(stderr, "Could not allocate video frame\n");
+		exit(1);
+	}
+
+	inpic->format = AV_PIX_FMT_RGB32;
+	inpic->width = c->width;
+	inpic->height = c->height;
+
+	ret = av_image_alloc(inpic->data, inpic->linesize, c->width, c->height,
+		AV_PIX_FMT_RGB32, 32);
+	if (ret < 0) {
+		fprintf(stderr, "Could not allocate raw picture buffer\n");
+		exit(1);
+	}
+	fooContext = sws_getContext(width, height, AV_PIX_FMT_RGB32, c->width, c->height, AV_PIX_FMT_YUV420P, SWS_FAST_BILINEAR, NULL, NULL, NULL);
+
+	pkt = av_packet_alloc(); //packet allocation.
 
 }
 
@@ -81,8 +104,12 @@ Encoder::~Encoder()
 {
 	avcodec_free_context(&c);
 	av_freep(&frame->data[0]);
+	av_frame_free(&inpic);
 	av_frame_free(&frame);
 	delete[] pPixels;
+	av_packet_free(&pkt);
+
+
 } 
 
 
@@ -90,45 +117,36 @@ char * Encoder::encode(char * im, int *size)
 {
 	int ret, got_output;
 
-	av_init_packet(&pkt);
-	pkt.data = NULL;    // packet data will be allocated by the encoder
-	pkt.size = 0;
+	//av_init_packet(pkt);
+	pkt->data = NULL;    // packet data will be allocated by the encoder
+	pkt->size = 0;
 
 	fflush(stdout);
 	RGBQUAD *pPixels = getBitmap(width, height);
 
-
-	int nbytes = avpicture_get_size(AV_PIX_FMT_YUV420P, c->width, c->height);                                      // allocating outbuffer
-	uint8_t* outbuffer = (uint8_t*)av_malloc(nbytes*sizeof(uint8_t));
-	AVFrame* inpic = av_frame_alloc();													              // mandatory frame allocation
-
 	frame->pts = i++;                                                                                              // setting frame pts
+
 	avpicture_fill((AVPicture*)inpic, (uint8_t*)pPixels, AV_PIX_FMT_RGB32, c->width, c->height);                   // fill image with input screenshot
 	avpicture_fill((AVPicture*)frame, outbuffer, AV_PIX_FMT_YUV420P, c->width, c->height);                         // clear output picture for buffer copy
-	av_image_alloc(frame->data, frame->linesize, c->width, c->height, c->pix_fmt, 1);
+
 	inpic->data[0] += inpic->linesize[0] * (height - 1);                                                      // flipping frame
 	inpic->linesize[0] = -inpic->linesize[0];                                                                   // flipping frame
 
-	struct SwsContext* fooContext = sws_getContext(width, height, AV_PIX_FMT_RGB32, c->width, c->height, AV_PIX_FMT_YUV420P, SWS_FAST_BILINEAR, NULL, NULL, NULL);
 	sws_scale(fooContext, inpic->data, inpic->linesize, 0, c->height, frame->data, frame->linesize);          // converting frame size and format
 
-	av_freep(&inpic->data[0]);
-	av_frame_free(&inpic);
-	
-	ret = avcodec_encode_video2(c, &pkt, frame, &got_output);
 
+	ret = avcodec_encode_video2(c, pkt, frame, &got_output);
 	if (ret < 0) {
 		fprintf(stderr, "Error encoding frame\n");
 		exit(1);
 	}
-	char *data = nullptr;
+
+	char* data = "";
 	if (got_output)
 	{
-		data =  (char *)pkt.data;
-		*size = pkt.size;
+		data =  (char *)pkt->data;
+		*size = pkt->size;
 	}
-	av_freep(&frame->data[0]);
-	av_packet_unref(&pkt);
 	return data;
 }
 

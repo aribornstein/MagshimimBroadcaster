@@ -13,9 +13,6 @@ Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c5619
 	hash=None, flags=None
 Class Encoding1.Encoding: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-  Interfaces:
-    System.IDisposable
   Methods:
     GetEncoding(Byte[]): PrivateScope, Public, HideBySig
     GetDecoding(Byte[]): PrivateScope, Public, HideBySig
-    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig

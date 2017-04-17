@@ -6,21 +6,21 @@
 
 
 
-Encoding1::Encoding::Encoding(int width, int height)
+VideoEncoding::Encoding::Encoding(int width, int height)
 {
 	encoder = new Encoder(width, height);
-	decoder = new Decoder();
+	//decoder = new Decoder();
 }
 
-Encoding1::Encoding::~Encoding()
+VideoEncoding::Encoding::!Encoding()
 {
 	delete encoder;
-	delete decoder;
+	//delete decoder;
 }
 
 
 
-array<unsigned char, 1>^ Encoding1::Encoding::GetEncoding(array<unsigned char, 1>^ screen)
+array<unsigned char, 1>^ VideoEncoding::Encoding::GetEncoding(array<unsigned char, 1>^ screen)
 {
 	pin_ptr<System::Byte> pToScreen = &screen[0];
 	unsigned char* pby = pToScreen;
@@ -37,7 +37,7 @@ array<unsigned char, 1>^ Encoding1::Encoding::GetEncoding(array<unsigned char, 1
 	return data;
 }
 
-array<unsigned char, 1>^ Encoding1::Encoding::GetDecoding(array<unsigned char, 1>^ packet)
+array<unsigned char, 1>^ VideoEncoding::Encoding::GetDecoding(array<unsigned char, 1>^ packet)
 {
 	decoder->decode(nullptr, 10);
 	return packet;

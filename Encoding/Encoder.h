@@ -25,6 +25,7 @@ extern "C"
 
 
 #include <Windows.h>
+#include <string>
 
 #pragma comment(lib,"user32.lib") 
 #pragma comment(lib,"Gdi32.lib") 
@@ -43,11 +44,14 @@ private:
 	AVCodec *codec;
 	AVCodecContext *c;
 	AVFrame *frame;
-	AVPacket pkt;
+	AVFrame* inpic;
+	AVPacket *pkt;
 	int width;
 	int height;
 	int i;
 	RGBQUAD *pPixels;
+	uint8_t* outbuffer;
+	struct SwsContext* fooContext;
 
 };
 

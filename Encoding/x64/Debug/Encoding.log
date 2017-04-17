@@ -1,8 +1,12 @@
-﻿  Encoder.cpp
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Encoding.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Encoding.cpp
+c:\users\user\documents\magshimim\project\magshimimbroadcaster\encoding\Encoding.h(26): warning C4461: 'VideoEncoding::Encoding': this class has a finalizer '!VideoEncoding::Encoding' but no destructor '~VideoEncoding::Encoding'
+  c:\users\user\documents\magshimim\project\magshimimbroadcaster\encoding\Encoding.h(26): note: This diagnostic occurred in the compiler generated function 'void VideoEncoding::Encoding::Dispose(bool)'
+  .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
   AssemblyInfo.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
-Encoder.obj : warning LNK4248: unresolved typeref token (01000013) for 'SwsContext'; image may not run
+Encoder.obj : warning LNK4248: unresolved typeref token (01000018) for 'SwsContext'; image may not run
 Decoder.obj : warning LNK4248: unresolved typeref token (01000018) for 'SwsContext'; image may not run
-Encoder.obj : warning LNK4248: unresolved typeref token (01000014) for 'AVDictionary'; image may not run
+Encoder.obj : warning LNK4248: unresolved typeref token (01000019) for 'AVDictionary'; image may not run
 Decoder.obj : warning LNK4248: unresolved typeref token (0100001A) for 'AVDictionary'; image may not run
-  Encoding.vcxproj -> C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\x64\Debug\Encoding.dll
-  Encoding.vcxproj -> C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\x64\Debug\Encoding.pdb (Partial PDB)
+  Encoding.vcxproj -> C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\x64\Debug\VideoEncoding.dll
+  Encoding.vcxproj -> C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\x64\Debug\VideoEncoding.pdb (Partial PDB)

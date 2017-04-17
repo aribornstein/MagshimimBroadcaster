@@ -75,7 +75,8 @@ char * Decoder::decode(char * pkt, int size)
 	}
 	if (got_frame)
 	{
-		struct SwsContext* fooContext = sws_getContext(frame->width, frame->height, AV_PIX_FMT_YUV420P, frame->width, frame->height, AV_PIX_FMT_RGB24, NULL, NULL, NULL, NULL);
+		struct SwsContext* fooContext = sws_getContext(frame->width, frame->height, AV_PIX_FMT_YUV420P, 
+			                                           frame->width, frame->height, AV_PIX_FMT_RGB24, NULL, NULL, NULL, NULL);
 		sws_scale(fooContext, frame->data, frame->linesize, 0, c->height, frame->data, frame->linesize);          // converting frame size and format
 
 	}
