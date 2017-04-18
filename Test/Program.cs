@@ -22,12 +22,15 @@ namespace Test
                 for(int i = 0; i < 200; i++)
                 {
                     stuff = encode.GetEncoding(new byte[] { 1, 2, 3, 4 });
-                    /*if (stuff.Length > 0)
+                    if (stuff.Length > 0)
                     {
-                        string hex = BitConverter.ToString(stuff);
-                        Console.WriteLine(hex);
+                        byte[] im = encode.GetDecoding(stuff);
+                        if (im.Length > 0)
+                        {
+                            
+                        }
                     }
-                    */
+                    
                 }
                 Console.WriteLine("press.");
                 Console.ReadKey();

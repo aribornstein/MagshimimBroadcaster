@@ -4,6 +4,7 @@
 
 
 #include <msclr/marshal.h>
+
 using namespace System;
 #include "Encoder.h"
 #include "Decoder.h"

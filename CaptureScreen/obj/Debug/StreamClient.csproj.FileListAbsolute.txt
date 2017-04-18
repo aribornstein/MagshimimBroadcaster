@@ -40,3 +40,5 @@ C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\CaptureScreen\obj
 C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\CaptureScreen\obj\Debug\StreamClient.csproj.GenerateResource.Cache
 C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\CaptureScreen\obj\Debug\CaptureScreen.exe
 C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\CaptureScreen\obj\Debug\CaptureScreen.pdb
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\CaptureScreen\bin\Debug\VideoEncoding.dll
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\CaptureScreen\bin\Debug\VideoEncoding.pdb

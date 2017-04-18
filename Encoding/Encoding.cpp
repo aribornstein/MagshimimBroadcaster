@@ -9,13 +9,13 @@
 VideoEncoding::Encoding::Encoding(int width, int height)
 {
 	encoder = new Encoder(width, height);
-	//decoder = new Decoder();
+	decoder = new Decoder(width, height);
 }
 
 VideoEncoding::Encoding::!Encoding()
 {
 	delete encoder;
-	//delete decoder;
+	delete decoder;
 }
 
 
@@ -39,6 +39,16 @@ array<unsigned char, 1>^ VideoEncoding::Encoding::GetEncoding(array<unsigned cha
 
 array<unsigned char, 1>^ VideoEncoding::Encoding::GetDecoding(array<unsigned char, 1>^ packet)
 {
-	decoder->decode(nullptr, 10);
-	return packet;
+	pin_ptr<System::Byte> pToPacket = &packet[0];
+	unsigned char* pby = pToPacket;
+	char* packetString = reinterpret_cast<char*>(pby);
+	int imSize = 0;
+	char *im = decoder->ReadFrame(packetString, packet->Length, &imSize); //must deallocate im if it isn't NULL;
+	array<unsigned char, 1> ^imData = gcnew array<unsigned char, 1>(imSize);
+	if (im && imSize)
+	{
+		System::Runtime::InteropServices::Marshal::Copy(IntPtr((void *)im), imData, 0, imSize);
+		delete im;
+	}
+	return imData;
 }
