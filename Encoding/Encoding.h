@@ -19,7 +19,7 @@ namespace VideoEncoding {
 
 		array<unsigned char, 1> ^ GetEncoding(array<unsigned char, 1> ^screen);
 		array<unsigned char, 1> ^ GetDecoding(array<unsigned char, 1> ^packet);
-
+		array<unsigned char, 1> ^ CaptureBitmap();
 
 	private:
 		Encoder *encoder;

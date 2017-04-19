@@ -25,6 +25,7 @@ namespace StreamServer
 
         List<Socket> clients = new List<Socket>();
 
+        const int BUFFER_SIZE = 2048;
 
         /* 
         * Start the server.
@@ -52,14 +53,14 @@ namespace StreamServer
             Socket socketToHandleRequest = recieveServer.AcceptSocket(); //accept client request.
             NetworkStream network = new NetworkStream(socketToHandleRequest);
 
-
+            byte[] buff = new byte[BUFFER_SIZE];
             while (true)
             {
 
                 lock (this) //to handle multiple client call issue
                 {
                     BinaryFormatter serializer = new BinaryFormatter();
-                    byte[] map = (byte[]) serializer.Deserialize(network); //deserialize from the network stream.
+                    object map =  serializer.Deserialize(network); //deserialize from the network stream.
                     SendContinuation(map);
                 }
                 socketToHandleRequest = null; // assign null to release memeory.
@@ -92,7 +93,7 @@ namespace StreamServer
         * Parameters: the packet to send.
         * Return Value: None.
         */
-        public void SendContinuation(byte[] bytes)
+        public void SendContinuation(object bytes)
         {
             lock(clients) //Make sure no new client are inserted.
             {

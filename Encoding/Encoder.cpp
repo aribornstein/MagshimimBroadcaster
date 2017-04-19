@@ -73,6 +73,7 @@ Encoder::Encoder(int size_x, int size_y) : width(size_x), height(size_y), i(0)
 		exit(1);
 	}
 
+	bitmapArray = new RGBQUAD[width*height];
 	pPixels = new RGBQUAD[width*height];
 	int nbytes = avpicture_get_size(c->pix_fmt, c->width, c->height);   // allocating outbuffer
 	outbuffer = (uint8_t*)av_malloc(nbytes*sizeof(uint8_t));
@@ -107,6 +108,7 @@ Encoder::~Encoder()
 	av_frame_free(&inpic);
 	av_frame_free(&frame);
 	delete[] pPixels;
+	delete[] bitmapArray;
 	av_packet_free(&pkt);
 
 
@@ -122,15 +124,12 @@ char * Encoder::encode(char * im, int *size)
 	pkt->size = 0;
 
 	fflush(stdout);
-	RGBQUAD *pPixels = getBitmap(width, height);
 
+	
 	frame->pts = i++;                                                                                              // setting frame pts
 
-	avpicture_fill((AVPicture*)inpic, (uint8_t*)pPixels, AV_PIX_FMT_RGB32, c->width, c->height);                   // fill image with input screenshot
+	avpicture_fill((AVPicture*)inpic, (uint8_t*)im, AV_PIX_FMT_RGB32, c->width, c->height);                   // fill image with input screenshot
 	avpicture_fill((AVPicture*)frame, outbuffer, AV_PIX_FMT_YUV420P, c->width, c->height);                         // clear output picture for buffer copy
-
-	inpic->data[0] += inpic->linesize[0] * (height - 1);                                                      // flipping frame
-	inpic->linesize[0] = -inpic->linesize[0];                                                                   // flipping frame
 
 	sws_scale(fooContext, inpic->data, inpic->linesize, 0, c->height, frame->data, frame->linesize);          // converting frame size and format
 
@@ -150,26 +149,39 @@ char * Encoder::encode(char * im, int *size)
 	return data;
 }
 
-RGBQUAD *Encoder::getBitmap(int screenWidth, int screenHeight)
+RGBQUAD *Encoder::getBitmap(int *size)
 {
 	HWND hDesktopWnd = GetDesktopWindow();
 	HDC hDesktopDC = GetDC(hDesktopWnd);
 	HDC hCaptureDC = CreateCompatibleDC(hDesktopDC);
-	HBITMAP hBmp = CreateCompatibleBitmap(GetDC(0), screenWidth, screenHeight);
+	HBITMAP hBmp = CreateCompatibleBitmap(GetDC(0), width, height);
 	SelectObject(hCaptureDC, hBmp);
-	BitBlt(hCaptureDC, 0, 0, screenWidth, screenHeight, hDesktopDC, 0, 0, SRCCOPY | CAPTUREBLT);
+	BitBlt(hCaptureDC, 0, 0, width, height, hDesktopDC, 0, 0, SRCCOPY | CAPTUREBLT);
 	BITMAPINFO bmi = { 0 };
 	bmi.bmiHeader.biSize = sizeof(bmi.bmiHeader);
-	bmi.bmiHeader.biWidth = screenWidth;
-	bmi.bmiHeader.biHeight = screenHeight;
+	bmi.bmiHeader.biWidth = width;
+	bmi.bmiHeader.biHeight = height;
 	bmi.bmiHeader.biPlanes = 1;
 	bmi.bmiHeader.biBitCount = 32;
 	bmi.bmiHeader.biCompression = BI_RGB;
-	GetDIBits(hCaptureDC, hBmp, 0, screenHeight, pPixels, &bmi, DIB_RGB_COLORS);
+	GetDIBits(hCaptureDC, hBmp, 0, height, pPixels, &bmi, DIB_RGB_COLORS);
 
 	ReleaseDC(hDesktopWnd, hDesktopDC);
 	DeleteDC(hCaptureDC);
 	DeleteObject(hBmp);
 
-	return pPixels;
+	*size = sizeof(RGBQUAD)*width*height;
+
+	avpicture_fill((AVPicture*)inpic, (uint8_t*)pPixels, AV_PIX_FMT_RGB32, c->width, c->height);                   // fill image with input screenshot
+
+	inpic->data[0] += inpic->linesize[0] * (height - 1);                                                      // flipping frame
+	inpic->linesize[0] = -inpic->linesize[0];                                                                   // flipping frame
+
+	int ret = av_image_copy_to_buffer((uint8_t *)bitmapArray, *size, inpic->data, inpic->linesize,
+		AV_PIX_FMT_RGB32, inpic->width, inpic->height, 1);
+
+	if (ret > 0)
+		return bitmapArray;
+	*size = 0;
+	return nullptr;
 }

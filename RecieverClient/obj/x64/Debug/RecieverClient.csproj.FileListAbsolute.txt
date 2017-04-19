@@ -1,11 +1,13 @@
 C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\RecieverClient\bin\x64\Debug\RecieverClient.exe.config
 C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\RecieverClient\bin\x64\Debug\RecieverClient.exe
 C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\RecieverClient\bin\x64\Debug\RecieverClient.pdb
-C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\RecieverClient\bin\x64\Debug\Core.dll
-C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\RecieverClient\bin\x64\Debug\Core.pdb
 C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\RecieverClient\obj\x64\Debug\RecieverClient.csprojResolveAssemblyReference.cache
 C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\RecieverClient\obj\x64\Debug\RecieverClient.Form1.resources
 C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\RecieverClient\obj\x64\Debug\RecieverClient.Properties.Resources.resources
 C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\RecieverClient\obj\x64\Debug\RecieverClient.csproj.GenerateResource.Cache
 C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\RecieverClient\obj\x64\Debug\RecieverClient.exe
 C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\RecieverClient\obj\x64\Debug\RecieverClient.pdb
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\RecieverClient\bin\x64\Debug\Core.dll
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\RecieverClient\bin\x64\Debug\VideoEncoding.dll
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\RecieverClient\bin\x64\Debug\Core.pdb
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\RecieverClient\bin\x64\Debug\VideoEncoding.pdb

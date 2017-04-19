@@ -52,3 +52,17 @@ array<unsigned char, 1>^ VideoEncoding::Encoding::GetDecoding(array<unsigned cha
 	}
 	return imData;
 }
+
+array<unsigned char, 1>^ VideoEncoding::Encoding::CaptureBitmap()
+{
+	int size = 0;
+	char *bitmap = (char *)encoder->getBitmap(&size);
+	array<unsigned char, 1> ^bitmapArray = gcnew array<unsigned char, 1>(size);
+
+	if (bitmap)
+	{
+		System::Runtime::InteropServices::Marshal::Copy(IntPtr((void *)bitmap), bitmapArray, 0, size);
+	}
+
+	return bitmapArray;
+}

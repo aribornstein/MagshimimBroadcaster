@@ -37,7 +37,7 @@ public:
 	Encoder(int size_x, int size_y);
 	~Encoder();
 	char * encode(char *im, int *size);
-	RGBQUAD *getBitmap(int screenWidth, int screenHeight);
+	RGBQUAD *getBitmap(int *size);
 
 
 private:
@@ -50,6 +50,7 @@ private:
 	int height;
 	int i;
 	RGBQUAD *pPixels;
+	RGBQUAD *bitmapArray;
 	uint8_t* outbuffer;
 	struct SwsContext* fooContext;
 

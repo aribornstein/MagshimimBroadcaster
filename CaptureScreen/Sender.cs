@@ -18,16 +18,18 @@ namespace CaptureScreen
 
         TcpClient client;
         NetworkStream network;
-        BitmapEncoder encoder;
+        H264Encoder encoder;
         BinaryFormatter serializer = new BinaryFormatter();
         
-        //Constructor that takes an address and a port.
-        public Sender(IPAddress address, short port)
+        //Constructor that takes an address and a port and the width of the video.
+        public Sender(IPAddress address, short port, int w, int h)
         {
             client = new TcpClient("localhost", 3333);
             network = client.GetStream();
-            encoder = new BitmapEncoder(); //Uses a bitmap encoder.
-            
+            encoder = new H264Encoder(w, h); //Uses a bitmap encoder.
+
+            serializer.Serialize(network, w);
+            serializer.Serialize(network, h);
             
         }
 
@@ -39,7 +41,10 @@ namespace CaptureScreen
         public void Send(IScreen screen)
         {
             byte[] byteArray = encoder.Encode(screen);
-            serializer.Serialize(network, byteArray);
+            if (byteArray.Length > 0)
+            {
+                serializer.Serialize(network, byteArray);
+            }
         }
     }
 }
