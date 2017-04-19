@@ -1,0 +1,2 @@
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\Test\bin\x86\Release\Test.exe.config
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\Test\obj\x86\Release\Test.csprojResolveAssemblyReference.cache

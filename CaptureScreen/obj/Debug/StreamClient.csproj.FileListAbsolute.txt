@@ -1,0 +1,44 @@
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\CaptureScreen\CaptureScreen\bin\Debug\CaptureScreen.exe
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\CaptureScreen\CaptureScreen\bin\Debug\CaptureScreen.exe.config
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\CaptureScreen\CaptureScreen\obj\Debug\StreamClient.csprojResolveAssemblyReference.cache
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\CaptureScreen\CaptureScreen\obj\Debug\CaptureScreen.Form1.resources
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\CaptureScreen\CaptureScreen\obj\Debug\CaptureScreen.Properties.Resources.resources
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\CaptureScreen\CaptureScreen\obj\Debug\StreamClient.csproj.GenerateResource.Cache
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\CaptureScreen\CaptureScreen\obj\Debug\CaptureScreen.exe
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\CaptureScreen\CaptureScreen\obj\Debug\CaptureScreen.pdb
+C:\Users\abornst\Documents\Visual Studio 2015\Projects\CaptureScreen\CaptureScreen\bin\Debug\CaptureScreen.pdb
+C:\Users\User\Documents\magshimim\Project\ScreenRecorder\CaptureScreen\bin\Debug\CaptureScreen.exe.config
+C:\Users\User\Documents\magshimim\Project\ScreenRecorder\CaptureScreen\bin\Debug\CaptureScreen.exe
+C:\Users\User\Documents\magshimim\Project\ScreenRecorder\CaptureScreen\bin\Debug\CaptureScreen.pdb
+C:\Users\User\Documents\magshimim\Project\ScreenRecorder\CaptureScreen\obj\Debug\StreamClient.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\magshimim\Project\ScreenRecorder\CaptureScreen\obj\Debug\CaptureScreen.Form1.resources
+C:\Users\User\Documents\magshimim\Project\ScreenRecorder\CaptureScreen\obj\Debug\CaptureScreen.Properties.Resources.resources
+C:\Users\User\Documents\magshimim\Project\ScreenRecorder\CaptureScreen\obj\Debug\StreamClient.csproj.GenerateResource.Cache
+C:\Users\User\Documents\magshimim\Project\ScreenRecorder\CaptureScreen\obj\Debug\CaptureScreen.exe
+C:\Users\User\Documents\magshimim\Project\ScreenRecorder\CaptureScreen\obj\Debug\CaptureScreen.pdb
+C:\Users\User\Documents\magshimim\Project\ScreenRecorder\CaptureScreen\bin\Debug\Core.dll
+C:\Users\User\Documents\magshimim\Project\ScreenRecorder\CaptureScreen\bin\Debug\Core.pdb
+C:\Users\User\Desktop\AriProj\Ido\ScreenRecorder\ScreenRecorder\CaptureScreen\bin\Debug\CaptureScreen.exe.config
+C:\Users\User\Desktop\AriProj\Ido\ScreenRecorder\ScreenRecorder\CaptureScreen\obj\Debug\CaptureScreen.exe
+C:\Users\User\Desktop\AriProj\Ido\ScreenRecorder\ScreenRecorder\CaptureScreen\obj\Debug\CaptureScreen.pdb
+C:\Users\User\Desktop\AriProj\Ido\ScreenRecorder\ScreenRecorder\CaptureScreen\bin\Debug\CaptureScreen.exe
+C:\Users\User\Desktop\AriProj\Ido\ScreenRecorder\ScreenRecorder\CaptureScreen\bin\Debug\CaptureScreen.pdb
+C:\Users\User\Desktop\AriProj\Ido\ScreenRecorder\ScreenRecorder\CaptureScreen\bin\Debug\Core.dll
+C:\Users\User\Desktop\AriProj\Ido\ScreenRecorder\ScreenRecorder\CaptureScreen\bin\Debug\Core.pdb
+C:\Users\User\Desktop\AriProj\Ido\ScreenRecorder\ScreenRecorder\CaptureScreen\obj\Debug\StreamClient.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\AriProj\Ido\ScreenRecorder\ScreenRecorder\CaptureScreen\obj\Debug\CaptureScreen.Form1.resources
+C:\Users\User\Desktop\AriProj\Ido\ScreenRecorder\ScreenRecorder\CaptureScreen\obj\Debug\CaptureScreen.Properties.Resources.resources
+C:\Users\User\Desktop\AriProj\Ido\ScreenRecorder\ScreenRecorder\CaptureScreen\obj\Debug\StreamClient.csproj.GenerateResource.Cache
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\CaptureScreen\bin\Debug\CaptureScreen.exe.config
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\CaptureScreen\bin\Debug\CaptureScreen.exe
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\CaptureScreen\bin\Debug\CaptureScreen.pdb
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\CaptureScreen\bin\Debug\Core.dll
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\CaptureScreen\bin\Debug\Core.pdb
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\CaptureScreen\obj\Debug\StreamClient.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\CaptureScreen\obj\Debug\CaptureScreen.Form1.resources
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\CaptureScreen\obj\Debug\CaptureScreen.Properties.Resources.resources
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\CaptureScreen\obj\Debug\StreamClient.csproj.GenerateResource.Cache
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\CaptureScreen\obj\Debug\CaptureScreen.exe
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\CaptureScreen\obj\Debug\CaptureScreen.pdb
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\CaptureScreen\bin\Debug\VideoEncoding.dll
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\CaptureScreen\bin\Debug\VideoEncoding.pdb

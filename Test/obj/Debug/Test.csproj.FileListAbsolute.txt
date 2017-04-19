@@ -1,0 +1,10 @@
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\Test\bin\Debug\Test.exe.config
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\Test\bin\Debug\Test.exe
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\Test\bin\Debug\Test.pdb
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\Test\bin\Debug\Core.dll
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\Test\bin\Debug\Encoding.dll
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\Test\bin\Debug\Core.pdb
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\Test\bin\Debug\Encoding.pdb
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\Test\obj\Debug\Test.exe
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\Test\obj\Debug\Test.pdb

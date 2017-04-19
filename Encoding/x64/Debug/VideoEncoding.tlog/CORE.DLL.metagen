@@ -1,0 +1,64 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly Core, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly VideoEncoding, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class Core.ArgbScreen: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    Core.IScreen
+  Properties:
+    System.Object screenRepresentation 'get set' : 
+  Methods:
+    get_screenRepresentation(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_screenRepresentation(Object): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetAsBitmap(Int32, Int32): PrivateScope, Public, HideBySig
+Class Core.BitmapEncoder: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    Core.IScreenEncoder
+  Methods:
+    Decode(Byte[]): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Encode(IScreen): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class Core.BitmapScreen: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    Core.IScreen
+  Properties:
+    System.Object screenRepresentation 'get set' : 
+  Methods:
+    get_screenRepresentation(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_screenRepresentation(Object): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Class Core.H264Encoder: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    Core.IScreenEncoder
+  Methods:
+    Decode(Byte[]): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Encode(IScreen): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Interface Core.IScreen: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    System.Object screenRepresentation 'get set' : 
+  Methods:
+    get_screenRepresentation(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_screenRepresentation(Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface Core.IScreenEncoder: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    Encode(IScreen): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Decode(Byte[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class Core.RgbScreen: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    Core.IScreen
+  Properties:
+    System.Object screenRepresentation 'get set' : 
+  Methods:
+    get_screenRepresentation(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_screenRepresentation(Object): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetAsBitmap(Int32, Int32): PrivateScope, Public, HideBySig

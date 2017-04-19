@@ -1,0 +1,11 @@
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\RecieverClient\bin\Release\RecieverClient.exe.config
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\RecieverClient\bin\Release\RecieverClient.exe
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\RecieverClient\bin\Release\RecieverClient.pdb
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\RecieverClient\bin\Release\Core.dll
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\RecieverClient\bin\Release\Core.pdb
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\RecieverClient\obj\Release\RecieverClient.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\RecieverClient\obj\Release\RecieverClient.Form1.resources
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\RecieverClient\obj\Release\RecieverClient.Properties.Resources.resources
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\RecieverClient\obj\Release\RecieverClient.csproj.GenerateResource.Cache
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\RecieverClient\obj\Release\RecieverClient.exe
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\RecieverClient\obj\Release\RecieverClient.pdb
