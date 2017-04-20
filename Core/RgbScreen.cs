@@ -32,9 +32,9 @@ namespace Core
 
                     for (int i = 0; i < im.Length; i += 3)
                     {
-                        ptr[i + 2] = im[i + 2];
+                        ptr[i + 0] = im[i + 2];
                         ptr[i + 1] = im[i + 1];
-                        ptr[i] = im[i];
+                        ptr[i + 2] = im[i];
                     }
                 }
                 pic.UnlockBits(bmpData);
