@@ -38,7 +38,9 @@ namespace CaptureScreen
 
             while (true)
             {
+
                 BitmapScreen screen = recorder.Capture() as BitmapScreen; //get a bitmap
+
                 Bitmap bitmap = screen.screenRepresentation as Bitmap;
                 pictureBox.Image = (Image) bitmap.Clone(); //display it.
 

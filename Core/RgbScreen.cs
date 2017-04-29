@@ -29,12 +29,16 @@ namespace Core
                 unsafe
                 {
                     byte* ptr = (byte*)bmpData.Scan0;
-
-                    for (int i = 0; i < im.Length; i += 3)
+                    for (int i = 0; i < h; i++)
                     {
-                        ptr[i + 0] = im[i + 2];
-                        ptr[i + 1] = im[i + 1];
-                        ptr[i + 2] = im[i];
+                        for (int j = 0; j < w; j++)
+                        {
+                            ptr[0] = im[(j + w * i) * 3 + 2];
+                            ptr[1] = im[(j + w * i) * 3 + 1];
+                            ptr[2] = im[(j + w * i) * 3 + 0];
+                            ptr += 3;
+                        }
+                        ptr += padding;
                     }
                 }
                 pic.UnlockBits(bmpData);

@@ -119,7 +119,7 @@ char * Decoder::ReadFrame(char * pkt, int size, int *imSize)
 	
 
 	char *im = new char[*imSize];
-	int ret = av_image_copy_to_buffer((uint8_t *)im, *imSize, RGBFrame->data, RGBFrame->linesize, AV_PIX_FMT_RGB24, RGBFrame->width, RGBFrame->height, 24);
+	int ret = av_image_copy_to_buffer((uint8_t *)im, *imSize, RGBFrame->data, RGBFrame->linesize, AV_PIX_FMT_RGB24, RGBFrame->width, RGBFrame->height, 1);
 	
 	if (ret > 0)
 		return im;
