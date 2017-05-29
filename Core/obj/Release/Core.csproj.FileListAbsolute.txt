@@ -1,0 +1,5 @@
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\Core\bin\Release\Core.dll
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\Core\bin\Release\Core.pdb
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\Core\obj\Release\Core.dll
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\Core\obj\Release\Core.pdb
+C:\Users\User\Documents\magshimim\Project\MagshimimBroadcaster\Core\obj\Release\Core.csprojResolveAssemblyReference.cache

@@ -1,0 +1,32 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Encoding.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Stdafx.cpp
+  AssemblyInfo.cpp
+  Decoder.cpp
+Decoder.cpp(90): warning C4996: 'av_free_packet': was declared deprecated
+  C:\Users\User\Desktop\MagshimimBroadcaster-master\Encoding\ffmpeg\dev\include\libavcodec/avcodec.h(4492): note: see declaration of 'av_free_packet'
+Decoder.cpp(145): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+Decoder.cpp(179): warning C4996: 'avcodec_decode_video2': was declared deprecated
+  C:\Users\User\Desktop\MagshimimBroadcaster-master\Encoding\ffmpeg\dev\include\libavcodec/avcodec.h(4831): note: see declaration of 'avcodec_decode_video2'
+Decoder.cpp(194): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xutility(2372): warning C4996: 'std::copy::_Unchecked_iterators::_Deprecate': Call to 'std::copy' with parameters that may be unsafe - this call relies on the caller to check that the passed values are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documentation on how to use Visual C++ 'Checked Iterators'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xutility(2372): note: see declaration of 'std::copy::_Unchecked_iterators::_Deprecate'
+  Decoder.cpp(195): note: see reference to function template instantiation '_OutIt std::copy<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<unsigned char>>>,_Ty*>(_InIt,_InIt,_OutIt)' being compiled
+          with
+          [
+              _OutIt=uint8_t *,
+              _Ty=uint8_t,
+              _InIt=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<unsigned char>>>
+          ]
+  Encoder.cpp
+  Encoding.cpp
+c:\users\user\desktop\magshimimbroadcaster-master\encoding\Encoding.h(27): warning C4461: 'VideoEncoding::Encoding': this class has a finalizer '!VideoEncoding::Encoding' but no destructor '~VideoEncoding::Encoding'
+  c:\users\user\desktop\magshimimbroadcaster-master\encoding\Encoding.h(27): note: This diagnostic occurred in the compiler generated function 'void VideoEncoding::Encoding::Dispose(bool)'
+  Generating Code...
+  .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
+  AssemblyInfo.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
+Encoder.obj : warning LNK4248: unresolved typeref token (01000019) for 'SwsContext'; image may not run
+Decoder.obj : warning LNK4248: unresolved typeref token (01000019) for 'SwsContext'; image may not run
+Encoder.obj : warning LNK4248: unresolved typeref token (0100001A) for 'AVDictionary'; image may not run
+Decoder.obj : warning LNK4248: unresolved typeref token (0100001B) for 'AVDictionary'; image may not run
+  Encoding.vcxproj -> C:\Users\User\Desktop\MagshimimBroadcaster-master\x64\Debug\VideoEncoding.dll
+  Encoding.vcxproj -> C:\Users\User\Desktop\MagshimimBroadcaster-master\x64\Debug\VideoEncoding.pdb (Partial PDB)
